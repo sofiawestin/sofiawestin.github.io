@@ -1,0 +1,387 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url("imgs/Background\ website.jpg");
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+img {
+  height: 10%;
+  width: 10%;
+}
+
+.frontpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 18%;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 94px;
+  align-items: center;
+  color: #8b77e4;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-weight: medium;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* ARROW */
+.arrow {
+  display: inline;
+  position: relative;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #8b77e4;
+  border-right: 5px solid #8b77e4;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/* */
+
+#textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  padding-top: 100px;
+  margin-left: 5%;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+#textBoxunder {
+  margin-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  font-family: roboto;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+#checkBoxContainer {
+  height: 50%;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+.categories {
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cateBox {
+  height: 100%;
+  width: 15%;
+  background: #ecddab;
+  border-radius: 25px;
+  padding: 2%;
+  margin: 3%;
+  position: relative;
+  box-shadow: 2px 2px 2px 2px #00000031;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: transform 0.2s;
+}
+
+.cateBox:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+#recipeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.itemBox {
+  height: 20%;
+  width: 20%;
+  padding-top: 3.5%;
+  padding-bottom: 2.8%;
+  padding-left: 0.001%;
+  padding-right: 0.001%;
+  text-align: center;
+  background-color: #ecddab;
+  border-radius: 25px;
+  margin: 2%;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 2px 2px 2px 2px #00000031;
+  transition: transform 0.2s;
+}
+
+.itemBox:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+#v {
+  font-family: "Roboto", sans-serif;
+  font-weight: medium 500;
+  line-height: 2.1;
+  transition: transform 0.2s;
+}
+
+.itemBox:hover {
+  cursor: pointer;
+}
+
+#v:hover {
+  cursor: pointer;
+  color: #7864d3;
+  font-size: 16.5px;
+}
+
+#submit {
+  padding: 1.3%;
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 7%;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  color: white;
+  border: 0px solid rgb(0, 0, 0);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+#submitContainer {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+}
+
+#submit:hover {
+  color: rgb(255, 255, 255);
+  background-color: #8b77e4;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.icon1 {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 3%;
+}
+.icon2 {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 3%;
+}
+
+.icon3 {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 3%;
+}
+
+/* VEGAN OPTION BUTTON
+
+/* The switch - the box around the slider */
+
+.veganButton {
+  padding-top: 2%;
+}
+
+#veganOption {
+  padding-bottom: 0.5%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #8b77e4;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #8b77e4;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* checkboxes */
+input {
+  cursor: pointer;
+}
+
+/*MOBILE DEVICE*/
+@media only screen and (max-width: 768px) {
+  .checkBoxContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .cateBox {
+    flex-basis: 50%;
+    flex-direction: column;
+  }
+}
+
+/* information popup */
+.popup {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popuptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: auto;
+  top: -20px;
+  left: 70px;
+  font-size: 12px;
+  box-shadow: 2px 2px 2px 2px #00000031;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

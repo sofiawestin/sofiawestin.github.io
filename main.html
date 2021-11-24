@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Reduce your food waste</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600;1,700;1,900&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--
+    THINGS TO NOTE:
+    -DIVs are boxes you can put things inside, think of it as "en låda i en byrå" (låda = div, byrå = body).
+    -INPUT tags can be many things, we describe what kind of thing in the TYPE (in this case "checkbox"), could also be text, password, etc.
+    -ID is what we name the tags, giving them an individual "name/title" so you can ex call them in other elements but is MOSTLY used for calling the tags in javascript.
+    -In this case the INPUTs and LABELs are connected through the INPUTs "ID" and the LABELs "FOR", making you able to press the box AND the text in order to check the box.
+    -VALUE is what we will be picking up in javascript and comparing the ingredient-lists to.
+    -ONCLICK is what should happen if you press the BUTTON, in this case calling the FUNCTION "submitIngredients" inside our javascript file, we know its a function 
+    due to "()".
+    -The styling for all the images is done in the ".css" file and there you can change for an example the height/width of the pictures posted, its linked in to this page 
+    underneath the "<head>" tag inside the "<link>" tag.
+    -The javascript code is all done in the ".js" file and linked at the bottom inside the "<script>" tag.
+-->
+
+    <div class="frontpage">REDUCE YOUR <br />FOOD WASTE</div>
+    <div class="slogan">Don't let food go bad - use what you have</div>
+
+    <a href="#textBox">
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </a>
+
+    <a>
+      <div id="textBox">What's in your <br />fridge today?</div>
+    </a>
+    <div id="textBoxunder">
+      Fill in the checkboxes of what food you have in your fridge <br />
+      and let us provide you with recipes matching what you already <br />
+      have. This way you save your food, money and planet!
+      <div class="veganButton"></div>
+      <div class="popup" onclick="myFunction()">
+        <img
+          src="imgs/info.png"
+          alt="informationbox"
+          style="width: 20px; float: left"
+        />
+        <span class="popuptext" id="myPopup"
+          >If you have plant-based alternatives to dairy products you can
+          still<br />
+          use the dairy category and replace the non-vegan ingredient with
+          your<br />
+          substitute.</span
+        >
+      </div>
+      <div id="veganOption">&nbsp Vegan</div>
+      <label class="switch">
+        <input type="checkbox" id="vegan" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div id="checkBoxContainer">
+      <div id="test"></div>
+      <div class="cateBox">
+        <img class="icon1" src="imgs/vegetable (kopia).png" alt="vegetables" />
+        <span class="categories">Vegetables</span><br />
+
+        <input
+          type="checkbox"
+          value="carrots"
+          name="ingredientCheckBox"
+          id="v1"
+        />
+        <label id="v" for="v1">Carrots</label><br />
+
+        <input
+          type="checkbox"
+          value="yellowonion"
+          name="ingredientCheckBox"
+          id="v2"
+        />
+        <label id="v" for="v2">Yellow onion</label><br />
+
+        <input
+          type="checkbox"
+          value="potatoes"
+          name="ingredientCheckBox"
+          id="v3"
+        />
+        <label id="v" for="v3">Potatoes</label><br />
+
+        <input
+          type="checkbox"
+          value="zucchini"
+          name="ingredientCheckBox"
+          id="v4"
+        />
+        <label id="v" for="v4">Zucchini</label><br />
+
+        <input type="checkbox" value="leek" name="ingredientCheckBox" id="v5" />
+        <label id="v" for="v5">Leek</label><br />
+
+        <input
+          type="checkbox"
+          value="pepper"
+          name="ingredientCheckBox"
+          id="v6"
+        />
+        <label id="v" for="v6">Pepper</label><br />
+
+        <input
+          type="checkbox"
+          value="eggplant"
+          name="ingredientCheckBox"
+          id="v7"
+        />
+        <label id="v" for="v7">Eggplant</label><br />
+
+        <input
+          type="checkbox"
+          value="tomato"
+          name="ingredientCheckBox"
+          id="v8"
+        />
+        <label id="v" for="v8">Tomato</label><br />
+
+        <input
+          type="checkbox"
+          value="broccoli"
+          name="ingredientCheckBox"
+          id="v9"
+        />
+        <label id="v" for="v9">Broccoli</label><br />
+
+        <input
+          type="checkbox"
+          value="redonion"
+          name="ingredientCheckBox"
+          id="v10"
+        />
+        <label id="v" for="v10">Red onion</label><br />
+
+        <input
+          type="checkbox"
+          value="avocado"
+          name="ingredientCheckBox"
+          id="v11"
+        />
+        <label id="v" for="v11">Avocado</label><br />
+
+        <input
+          type="checkbox"
+          value="mushrooms"
+          name="ingredientCheckBox"
+          id="v13"
+        />
+        <label id="v" for="v13">Mushrooms</label><br />
+      </div>
+
+      <div class="cateBox">
+        <img
+          class="icon2"
+          src="imgs/dairy-products (1) (kopia).png"
+          alt="dairyandeggs"
+        />
+        <span class="categories">Dairies & Eggs</span><br />
+        <input
+          type="checkbox"
+          value="cream"
+          name="ingredientCheckBox"
+          id="d1"
+        />
+        <label id="v" for="d1">Cream</label><br />
+
+        <input
+          type="checkbox"
+          value="cottagecheese"
+          name="ingredientCheckBox"
+          id="d2"
+        />
+        <label id="v" for="d2">Cottage cheese</label><br />
+
+        <input type="checkbox" value="milk" name="ingredientCheckBox" id="d3" />
+        <label id="v" for="d3">Milk</label><br />
+
+        <input
+          type="checkbox"
+          value="fetacheese"
+          name="ingredientCheckBox"
+          id="d4"
+        />
+        <label id="v" for="d4">Feta cheese</label><br />
+
+        <input
+          type="checkbox"
+          value="creme fraiche"
+          name="ingredientCheckBox"
+          id="d5"
+        />
+        <label id="v" for="d5">Creme fraiche</label><br />
+
+        <input
+          type="checkbox"
+          value="sourcream"
+          name="ingredientCheckBox"
+          id="d6"
+        />
+        <label id="v" for="d6">Sour cream</label><br />
+
+        <input
+          type="checkbox"
+          value="yoghurt"
+          name="ingredientCheckBox"
+          id="d7"
+        />
+        <label id="v" for="d7">Yoghurt</label><br />
+
+        <input type="checkbox" value="eggs" name="ingredientCheckBox" id="d8" />
+        <label id="v" for="d8">Eggs</label><br />
+
+        <input
+          type="checkbox"
+          value="mozzarella"
+          name="ingredientCheckBox"
+          id="d9"
+        />
+        <label id="v" for="d9">Mozzarella</label><br />
+
+        <input
+          type="checkbox"
+          value="creamcheese"
+          name="ingredientCheckBox"
+          id="d10"
+        />
+        <label id="v" for="d10">Cream cheese</label><br />
+      </div>
+
+      <div class="cateBox">
+        <img class="icon3" src="imgs/meat (kopia).png" alt="meatandfish" />
+        <span class="categories">Meat & Fish</span><br />
+        <input
+          type="checkbox"
+          value="mincedmeat"
+          name="ingredientCheckBox"
+          id="m1"
+        />
+        <label id="v" for="m1">Minced meat</label><br />
+
+        <input
+          type="checkbox"
+          value="chicken"
+          name="ingredientCheckBox"
+          id="m2"
+        />
+        <label id="v" for="m2">Chicken</label><br />
+
+        <input type="checkbox" value="beef" name="ingredientCheckBox" id="m3" />
+        <label id="v" for="m3">Beef</label><br />
+
+        <input type="checkbox" value="pork" name="ingredientCheckBox" id="m4" />
+        <label id="v" for="m4">Pork</label><br />
+
+        <input
+          type="checkbox"
+          value="SAUSAGE"
+          name="ingredientCheckBox"
+          id="m5"
+        />
+        <label id="v" for="m5">Sausage</label><br />
+
+        <input
+          type="checkbox"
+          value="bacon"
+          name="ingredientCheckBox"
+          id="m6"
+        />
+        <label id="v" for="m6">Bacon</label><br />
+
+        <input type="checkbox" value="ham" name="ingredientCheckBox" id="m7" />
+        <label id="v" for="m7">Ham</label><br />
+
+        <input
+          type="checkbox"
+          value="salmon"
+          name="ingredientCheckBox"
+          id="m8"
+        />
+        <label id="v" for="m8">Salmon</label><br />
+
+        <input type="checkbox" value="tuna" name="ingredientCheckBox" id="m9" />
+        <label id="v" for="m9">Tuna</label><br />
+
+        <input type="checkbox" value="cod" name="ingredientCheckBox" id="m10" />
+        <label id="v" for="m10">Cod</label><br />
+
+        <input
+          type="checkbox"
+          value="pancetta"
+          name="ingredientCheckBox"
+          id="m11"
+        />
+        <label id="v" for="m11">Pancetta</label><br />
+      </div>
+    </div>
+    <a href="#recipeContainer">
+      <div id="submitContainer">
+        <button id="submit" onclick="submitIngredients()">
+          Give me recipes!
+        </button>
+      </div>
+    </a>
+
+    <div id="recipeContainer"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
